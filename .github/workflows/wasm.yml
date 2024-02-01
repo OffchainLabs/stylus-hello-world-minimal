@@ -15,7 +15,7 @@ jobs:
     strategy:
       matrix:
         target: [
-          x86_64-unknown-linux-gnu,
+          wasm32-unknown-unknown
         ]
         cfg_release_channel: [nightly, stable]
 
