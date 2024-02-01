@@ -276,6 +276,16 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "8452105ba047068f40ff7093dd1d9da90898e63dd61736462e9cdda6a90ad3c3"
 
 [[package]]
+name = "mini-alloc"
+version = "0.4.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "bd9993556d3850cdbd0da06a3dc81297edcfa050048952d84d75e8b944e8f5af"
+dependencies = [
+ "cfg-if 1.0.0",
+ "wee_alloc",
+]
+
+[[package]]
 name = "num-traits"
 version = "0.2.16"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -456,15 +466,15 @@ dependencies = [
 name = "stylus-hello-world-minimal"
 version = "0.1.0"
 dependencies = [
+ "mini-alloc",
  "stylus-sdk",
- "wee_alloc",
 ]
 
 [[package]]
 name = "stylus-proc"
-version = "0.4.0"
+version = "0.4.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6557a84e06f1b7fd20e668e784281312d2d642f776c62a084b2e05b059fce8b4"
+checksum = "87a941ef748a746cd7b7075975073962d561934ffe91c056e22e20c8e89b64af"
 dependencies = [
  "alloy-primitives",
  "alloy-sol-types",
@@ -481,9 +491,9 @@ dependencies = [
 
 [[package]]
 name = "stylus-sdk"
-version = "0.4.1"
+version = "0.4.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "02b0e971622a7a27722c2e3f2658ac4795f00b12a528874c5d08863a2e91eb6e"
+checksum = "12c2d6fedbd0393e2b9f0259ca239c7ede9f87a89933627119b9dc038902d7e9"
 dependencies = [
  "alloy-primitives",
  "alloy-sol-types",
