@@ -9,6 +9,7 @@ mini-alloc = "0.4.2"
 
 [features]
 export-abi = ["stylus-sdk/export-abi"]
+debug = ["stylus-sdk/debug"]
 
 [lib]
 crate-type = ["lib", "cdylib"]
