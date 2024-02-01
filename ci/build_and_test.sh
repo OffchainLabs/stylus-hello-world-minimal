@@ -11,8 +11,8 @@ cargo -V
 
 # Build and test main crate
 if [ "$CFG_RELEASE_CHANNEL" == "nightly" ]; then
-    cargo build --locked --all-features
+    cargo build --locked --all-features --target=wasm32-unknown-unknown
 else
-    cargo build --locked
+    cargo build --locked --target=wasm32-unknown-unknown
 fi
-cargo test --all-features
+cargo test --all-features --target=wasm32-unknown-unknown
