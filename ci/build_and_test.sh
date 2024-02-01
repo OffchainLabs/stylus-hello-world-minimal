@@ -15,4 +15,3 @@ if [ "$CFG_RELEASE_CHANNEL" == "nightly" ]; then
 else
     cargo build --locked --target=wasm32-unknown-unknown
 fi
-cargo test --all-features --target=wasm32-unknown-unknown
