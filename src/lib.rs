@@ -5,6 +5,13 @@ extern crate alloc;
 #[global_allocator]
 static ALLOC: mini_alloc::MiniAlloc = mini_alloc::MiniAlloc::INIT;
 
+use core::panic::PanicInfo;
+
+#[panic_handler]
+fn panic(_info: &PanicInfo) -> ! {
+    loop {}
+}
+
 use alloc::vec::Vec;
 
 use stylus_sdk::stylus_proc::entrypoint;
