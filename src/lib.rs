@@ -1,19 +1,10 @@
-// Only run this as a WASM if the export-abi feature is not set.
-#![cfg_attr(not(any(feature = "export-abi", test)), no_main)]
+#![no_main]
 extern crate alloc;
 
 use alloc::vec::Vec;
-use stylus_sdk::prelude::*;
+use stylus_sdk::stylus_proc::entrypoint;
 
-
-#[storage]
-#[entrypoint]pub struct HelloWorldMinimal {
-}
-
-#[public]
-impl HelloWorldMinimal {
+#[entrypoint]
 fn user_main(input: Vec<u8>) -> Result<Vec<u8>, Vec<u8>> {
     Ok(input)
 }
-}
-
